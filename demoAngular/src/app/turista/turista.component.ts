@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Turista } from './turista';
+import { TURISTAS } from './mock-turistas';
 @Component({
   selector: 'app-turista',
   templateUrl: './turista.component.html',
@@ -10,6 +11,7 @@ export class TuristaComponent implements OnInit {
       id: 1,
       nombre: 'Jack'
   };
+  turistas = TURISTAS;
   constructor() { }
 
   ngOnInit() {

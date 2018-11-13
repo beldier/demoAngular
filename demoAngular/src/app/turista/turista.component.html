@@ -6,3 +6,10 @@
     <input [(ngModel)]="turista.nombre" placeholder="Ingrese el nombre de turista">
   </label>
 </div>
+
+<h2>Turistas mock</h2>
+<ul class="turistas">
+  <li *ngFor="let turista of turistas">
+    <span class="badge">{{turista.id}}</span> {{turista.nombre}}
+  </li>
+</ul>
