@@ -9,7 +9,17 @@
 
 <h2>Turistas mock</h2>
 <ul class="turistas">
-  <li *ngFor="let turista of turistas">
+  <li *ngFor="let turista of turistas" [class.selected]="turista === turistaSeleccionado" (click)="onSelect(turista)">
     <span class="badge">{{turista.id}}</span> {{turista.nombre}}
   </li>
 </ul>
+
+<div *ngIf="turistaSeleccionado">
+  <h2>{{turistaSeleccionado.name | uppercase}} Detalles</h2>
+  <div><span>id: </span>{{turistaSeleccionado.id}}</div>
+  <div>
+    <label>nombre:
+      <input [(ngModel)]="turistaSeleccionado.nombre" placeholder="nombre">
+    </label>
+  </div>
+</div>

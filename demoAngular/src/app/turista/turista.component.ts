@@ -12,9 +12,14 @@ export class TuristaComponent implements OnInit {
       nombre: 'Jack'
   };
   turistas = TURISTAS;
+  turistaSeleccionado: Turista;
   constructor() { }
 
   ngOnInit() {
+  }
+  onSelect(turista2: Turista): void {
+    this.turistaSeleccionado = turista2;
+    // alert(this.turistaSeleccionado.nombre);
   }
 
 }
